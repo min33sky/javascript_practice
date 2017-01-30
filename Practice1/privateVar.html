@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src = js/privateVar.js></script>
+	<script>
+		ghost = factory_movie('Ghost in the shell')
+		matrix = factory_movie('Matrix')
+		alert(ghost.get_title());
+		alert(matrix.get_title());
+		
+		ghost.set_title('공각기동대');
+		
+		alert(ghost.get_title());
+		alert(matrix.get_title());
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

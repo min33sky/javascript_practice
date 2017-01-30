@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+	<!-- addEventListener() -->
+	<input type="button" id="target1" value="button1">
+	<input type="button" id="target2" value="button2">
+	
+	<script>
+		
+		var t1 = document.getElementById('target1');
+		var t2 = document.getElementById('target2');
+
+		function btn_listener(event) {
+			switch(event.target.id){
+				case 'target1':
+					alert(1);
+					break;
+				case 'target2':
+					alert(2);
+					break;
+			}
+		}
+
+		// 두 번째 인자로 함수를 넘긴다. (함수는 객체이다.)
+		// 함수() -> 함수 객체가 아니라 값이 리턴되므로 에러 발생
+		t1.addEventListener('click', btn_listener);
+		t2.addEventListener('click', btn_listener);
+
+	</script>
+
+</body>
+</html>

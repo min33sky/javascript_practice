@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>Jquery 연습</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script>
+		 jQuery( document ).ready(function( $ ) {
+      $('body').prepend('<h1>Hello world</h1>');
+
+
+    });
+	</script>
+</head>
+<body>
+	<ul id="demo">
+    <li class="active">HTML</li>
+    <li id="active">CSS</li>
+    <li class="active">JavaScript</li>
+</ul>
+<ul id="execute">
+    <li>
+        <pre>
+					var lis = document.getElementsByTagName('li');
+					for(var i=0; i&lt;lis.length; i++){
+					    lis[i].style.color='red';   
+				</pre>
+        <pre>
+					$('li').css('color', 'red')     </pre>
+        <input type="button" value="execute" onclick="$('li').css('color', 'red')" />
+    </li>
+    <li>
+        <pre>
+					var lis = document.getElementsByClassName('active');
+					for(var i=0; i &lt; lis.length; i++){
+					   lis[i].style.color='red';   
+					}</pre>
+        <pre>
+					$('.active').css('color', 'red')</pre>
+      <input type="button" value="execute" onclick="$('.active').css('color', 'red')" />
+	  </li>
+	  <li>
+        <pre>
+					var li = document.getElementById('active');
+					li.style.color='red';
+					li.style.textDecoration='underline';</pre>
+        <pre>
+					$('$active').css('color', 'red').css('textDecoration', 'underline');
+        </pre>
+	    <input type="button" value="execute" onclick="$('#active').css('color', 'red').css('textDecoration', 'underline')" />
+    </li>
+</ul>
+</body>
+</html>

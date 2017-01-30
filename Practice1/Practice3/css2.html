@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		ul li{
+			color:red;
+		}
+		#lecture>li {
+			border:1px solid red;
+			/* color는 상속된다.*/
+			color:blue; 
+		}
+		ul, ol{
+			background-color: powderblue;
+		}
+
+	</style>
+</head>
+<body>
+	<ul>
+		<li>HTML</li>
+		<li>CSS</li>
+		<li>Javascript</li>
+	</ul>
+	<ol id='lecture'>
+		<li>HTML</li>
+		<li>
+			CSS
+			<ol>
+				<li>selector</li>
+				<li>declaration</li>
+			</ol>
+		</li>
+		<li>Javascript</li>
+	</ol>
+</body>
+</html>

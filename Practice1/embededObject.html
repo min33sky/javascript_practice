@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>내장 객체 활용</title>
+	<script>
+	/*
+		내장 객체 활용하기
+		Math.random() : 0 <= 랜덤수 < 1
+		Math.floor() : 내림
+	*/
+	/*
+		var arr = new Array('사나', '미나', '모모', '쯔위', '섹고');
+		function getRandomValueFromArray(arr) {
+			var result = Math.floor(Math.random()*arr.length);
+			return arr[result];
+		}
+		document.write(getRandomValueFromArray(arr));
+	*/
+		Array.prototype.random = function(){
+			var index = Math.floor(Math.random()*this.length);
+			return this[index];
+
+		} 
+		var arr = new Array('사나', '미나', '모모', '쯔위', '섹고');
+		console.log(arr.random());
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

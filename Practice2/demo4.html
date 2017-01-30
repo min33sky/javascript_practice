@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<ul>
+    <li>html</li>
+    <li>css</li>
+    <li>JavaScript</li>
+	</ul>
+	<script src ="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script>
+    console.log($('li').length);
+    console.log($('li')[0])
+    var li = $('li');
+    for(var i=0; i<li.length; i++){
+        console.log(li[i]);
+    }
+    $('li').css('text-decoration', 'underline').css('color', 'red');
+</script>
+<script>
+    var li = $('li');
+    li.map(function(index, elem){
+        console.log(index, elem);
+        $(elem).css('color', 'blue');
+    })
+</script>
+</body>
+</html>
