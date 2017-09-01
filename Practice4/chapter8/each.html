@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>each() 메서드</title>
+	<link rel="stylesheet" href="">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script>
+		
+			window.onload = function () {
+					var $li = $('li');	// 요소 선택
+					var length = $li.length; // 요소의 길이
+					var size = 12;
+
+					var number = Number(prompt('1 : 자바스크립트 2: JQuery'));
+
+					if(number == 1){					// javascript 반복문
+						// li 요소의 개수만큼 반복
+						for (var i = 0; i < length; i++) {
+							$('li').eq(i).css('fontSize', size + 'px');
+							size += 10;
+						}
+					}else if (number == 2){		// jquery 반복문 
+						$li.each(function (i) {
+							$(this).css('fontSize', size + 'px');
+							size += 30;
+						});
+					}else {
+						alert('잘못된 번호 입력');
+					}
+			}
+
+	</script>
+</head>
+<body>
+	<ul>
+		<li>first</li>
+		<li>second</li>
+		<li>third</li>
+		<li>fourth</li>
+	</ul>
+
+	
+</body>
+</html>

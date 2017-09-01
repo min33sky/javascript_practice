@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>배열 활용</title>
+	<link rel="stylesheet" href="">
+	<script>	
+		var korea = ['서울', '부산', '광주'];
+
+		// shift() : 첫 번째 인덱스값 제거 및 반환
+		var shift_korea = korea.shift();
+		document.write(shift_korea + '<br>');
+		document.write(korea + '<br>');
+
+		// unshift() : 첫 번째 인덱스값 추가
+		korea.unshift('제주도');
+		document.write(korea + '<br>');
+
+		var player = ['메시', '네이마르', '호날두'];
+
+		// pop() : 마지막 인덱스 값 제거 및 반환
+		var pop_player = player.pop();
+		document.write(pop_player + '<br>');
+		document.write(player);
+
+	</script>
+</head>
+<body>
+		
+</body>
+</html>

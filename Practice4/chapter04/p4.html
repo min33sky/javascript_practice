@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>이벤트 리스너</title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+
+	<button id="btn">click</button>
+
+	<script>
+		var btn = document.getElementById('btn');
+
+		/*
+			하나의 요소에 여러 이벤트 적용 가능
+		*/
+
+		btn.addEventListener('click', function(e) {
+			alert('event 1');
+		});
+
+		btn.addEventListener('click', function(e) {
+			alert('event 2');
+		});
+
+
+	</script>
+</body>
+</html>

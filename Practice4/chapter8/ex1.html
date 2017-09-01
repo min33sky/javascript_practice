@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>184쪽 연습문제</title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<h1>나이 계산기</h1>
+	<label for="age">출생한 연도를 입력하세요</label><br><br>
+	<input type="text" id="age" name="age">
+	<input type="button" value="확인" onclick="age()">
+
+	<script>
+		function age() {
+			var input = document.getElementById('age');
+			var d = new Date();
+			var year = d.getFullYear();
+			var current_year = new Date(input.value).getFullYear();
+			var age = year - current_year;
+			alert('당신의 나이는 ' + age);
+			console.log(current_year);
+		}
+	</script>
+</body>
+</html>

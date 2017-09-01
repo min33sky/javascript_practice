@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>112쪽 연습문제</title>
+	<link rel="stylesheet" href="">
+	<style>
+		#add-btn{
+			padding: 5px 10px;
+			border: 0;
+			background: #f80; color: white;
+			border-radius: 5px;
+		}
+		ul{
+			padding: 0;
+			list-style-position: inside;
+		}
+		li{
+			border-bottom: 1px solid #999;
+			padding: 5px 0;
+		}
+		.active{
+			background: #abc;
+		}
+	</style>
+</head>
+<body>
+	<h1 id="title">할 일 목록</h1><br>
+	<button id="add-btn">목록 추가</button>
+
+	<ul id="list">
+		<li>제목 1</li>
+		<li>제목 2</li>
+		<li>제목 3</li>
+		<li>제목 4</li>
+	</ul>
+
+	<script>
+		// 변수 초기화
+		var title = document.getElementById('title');
+		var list = document.getElementById('list');
+		var li = document.getElementsByTagName('li');
+		var addBtn = document.getElementById('add-btn');	// 목록 추가 버튼
+
+		list.addEventListener('click', activeItem);
+
+		function activeItem(event) {
+			// 클릭한 노드가 li이면
+			if(event.target.nodeName == 'LI'){
+				// 해당 목록을 클릭하면 제목 영역에 표시
+				title.innerHTML = event.target.innerText;
+				
+				// 목록 스타일 초기화
+				for (var i = 0; i < event.target.parentNode.children.length; i++) {
+					event.target.parentNode.children[i].removeAttribute('class');
+				}
+				// 클릭한 목록 스타일 지정
+				event.target.setAttribute('class', 'active');
+			}
+		}
+
+		addBtn.addEventListener('click', function(e) {
+			var txt = prompt('제목 입력');
+			list.innerHTML += '<li>' + txt + '</li>';
+
+		});
+
+	</script>
+</body>
+</html>

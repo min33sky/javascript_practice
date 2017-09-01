@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>142쪽 연습 문제</title>
+	<link rel="stylesheet" href="">
+	<style>
+		input[type='text'] {
+			width: 100px;
+			height: 100px;
+			text-align: center;
+			font-size: 86px;
+		}
+		input[type='text'][name='answer'] {
+			width: 100px;
+			height: 100px;
+			text-align: center;
+			font-size: 86px;
+			color: red;
+		}
+	</style>
+</head>
+<body>
+	<form name="frm">
+		<p>다음 빈칸에 올바른 값을 입력하세요</p>
+		<input type="text" name="a1" size="3" value="9"> +
+		<input type="text" name="a2" size="3" value="3"> =
+		<input type="text" name="answer" size="3"> 
+		<br><br>
+		<input type="button" onclick="result()" value="확인">
+	</form>
+
+	<script>
+
+		// 결과 버튼 클릭시
+		function result() {
+			var frm = document.forms['frm'];
+			var num1 = frm['a1'].value;
+			var num2 = frm['a2'].value;
+			var sum = Number(num1) + Number(num2);
+			var answer = frm['answer'].value;
+			
+			if(Number(answer) === sum){
+				alert('정답입니다.');
+			}else{
+				alert('틀렸습니다.');
+			}
+		}
+	</script>
+</body>
+</html>

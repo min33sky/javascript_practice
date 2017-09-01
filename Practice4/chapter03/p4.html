@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>style 객체와 속성</title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<div id="box">색상 바꾸기</div>	
+	<button onclick="setColor()">click</button>
+
+	<script>
+		function setColor() {
+			var box = document.getElementById('box');
+			box.style.color = 'white';
+			box.style.backgroundColor = 'orange';
+			
+		}
+	</script>
+</body>
+</html>

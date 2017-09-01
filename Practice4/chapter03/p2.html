@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>80페이지</title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<ul>
+			<li>first</li>
+			<li>second</li>
+			<li>third</li>
+	</ul>	
+	<button onclick="setColor()">click</button>
+
+	<script>
+		
+		var li = document.getElementsByTagName('li');
+		li[1].style.backgroundColor = 'red';
+		li[1].style.color = 'white';
+
+		function setColor() {
+			
+			// 문서 내의 모든 li 요소 선택
+			var li = document.querySelectorAll('li');
+
+			// 모든 li 요소에 속성 적용
+			for (var i = 0; i < li.length; i++) {
+				li[i].style.color = 'green';
+				li[i].style.backgroundColor = 'orange';
+			}
+		}
+
+	</script>
+
+</body>
+</html>

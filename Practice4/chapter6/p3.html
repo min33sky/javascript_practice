@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>this 객체</title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<ul id="gnb">
+		<li>click</li>
+		<li>second</li>
+		<li>third</li>
+	</ul>
+
+	<script>
+		// 문서 객체 선택
+		var gnb = document.getElementById('gnb');
+		var li = document.getElementsByTagName('li');
+
+		// 첫 번째 목록 클릭 시 스타일 변경
+		li[0].onclick = function () {
+			this.style.backgroundColor = 'red';
+		}
+
+	</script>
+</body>
+</html>

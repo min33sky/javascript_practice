@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>연습문제</title>
+	<link rel="stylesheet" href="">
+	<style>
+		#box{
+			width: 400px;
+			height: 400px;
+			border: 3px solid black;
+		}		
+		.red{
+			background: red;
+		}
+		.blue{
+			background: blue;
+		}
+	</style>
+</head>
+<body>
+	<div id="box">Hi</div>
+	<button id="red" onclick="setRedColor()">Red</button>
+	<button id="blue" onclick="setBlueColor()">Blue</button>
+	
+	<script>
+		function setRedColor() {
+			var red = document.getElementById('box');
+			red.setAttribute('class', 'red');
+		}
+
+		function setBlueColor() {
+			var blue = document.getElementById('box');
+			blue.setAttribute('class', 'blue');
+		}
+	</script>
+</body>
+</html>

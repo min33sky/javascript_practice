@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>내부 자바스크립트</title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<ul>
+		<li id="dog">강아지</li>
+		<li>소</li>
+		<li>닭</li>
+		<li>고양이</li>
+	</ul>
+
+	<script>
+		var dog = document.getElementById('dog'); // 요소를 선택
+
+		// 강아지를 클릭 시 함수를 실행
+		dog.onclick = function () {
+			alert('멍멍!!');
+		}
+	</script>
+</body>
+</html>

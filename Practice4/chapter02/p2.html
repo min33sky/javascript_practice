@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>입력 요소를 선택했을 때의 상호 작용 처리</title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<label for="nick">nickname</label>
+	<input type="text" id="nick">
+
+	<script>
+		// 요소를 선택
+		var nick = document.getElementById('nick');
+
+		// 입력란에 문자를 표시
+		nick.value = '별명을 입력하세요	';
+
+		nick.onfocus = function () {
+			this.style.background = 'orange';
+			this.style.color = 'white';
+			this.value = 'Click ~!! ^_^';
+		}
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>104쪽 연습문제</title>
+	<link rel="stylesheet" href="">
+	<style>
+		.color{
+			background: red;
+		}
+	</style>
+</head>
+<body>
+	<h1 id="heading">마우스를 올려주세요</h1>
+
+	<script>
+		var h1 = document.getElementById('heading');
+
+		function msover() {
+			h1.setAttribute('class', 'color');
+			this.style.color = 'white';
+		}
+
+		function msout() {
+			h1.removeAttribute('class');
+			this.style.color = '';
+		}
+
+		h1.addEventListener('mouseover', msover);
+		h1.addEventListener('mouseout', msout);
+	</script>
+</body>
+</html>
