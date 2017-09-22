@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>객체지향</title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<script>
+		// 함수를 선언
+		function my_character(name, job) {
+			document.write('내 이름은 ' + name + '이며 직업은 ' + job + '입니다.<br>');
+		}
+
+		var character = [{
+			name: '루이스',
+			job: '기사'
+		},
+		{
+			name: '토레스',
+			job: '마법사'
+		}];
+
+		// 함수를 호출
+		my_character(character[0].name, character[0].job);
+		my_character(character[1].name, character[1].job);
+	</script>
+</body>
+</html>

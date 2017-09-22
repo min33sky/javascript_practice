@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>for문으로 버튼에 이벤트 리스너 추가</title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<div class="buttons1">
+		<button class="btn">button1</button>
+		<button class="btn">button2</button>
+		<button class="btn">button3</button>
+		<button class="btn">button4</button>
+	</div>
+	<hr>
+	<div class="buttons2">
+		<button class="btn2">button1</button>
+		<button class="btn2">button2</button>
+		<button class="btn2">button3</button>
+		<button class="btn2">button4</button>
+	</div>
+
+	<script>
+		var btn = document.querySelectorAll('.btn');
+
+		for (var i = 0; i < 4; i++) {
+			btn[i].addEventListener('click', function(e) {
+				console.log(i);	// 클로저가 for문의 변수 i를 참조 : 4가 출력
+			});
+		}
+
+		var btn2 = document.querySelectorAll('.btn2');
+
+		for (var i = 0; i < btn2.length; i++) {
+			(function (x) {
+					btn2[x].addEventListener('click', function(e) {
+						console.log(x);	// 클로저가 익명함수의 매개변수 i를 참조
+					});
+			})(i);
+		}
+	</script>
+</body>
+</html>

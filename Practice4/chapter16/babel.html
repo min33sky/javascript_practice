@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Babel ES6 to ES5</title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+		<div id="output"></div>
+
+		<!-- Babel 코드 변환기 -->
+		<script src='https://unpkg.com/babel-standalone@6.26.0/babel.min.js'></script>
+
+		<!-- 여기서부터 ES6 코드르 작성 -->
+		<script type="text/babel">
+			const getMessage = () => 'Hello World';
+			document.getElementById('output').innerHTML = getMessage();
+		</script>
+		
+</body>
+</html>

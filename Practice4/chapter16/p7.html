@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>화살표 함수와 this</title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<script>
+		let obj = {
+			num : 5,
+			add1 : function (a) {
+				console.log(this.num + a, this);
+			},
+			add2 : (a) => {
+				console.log(this.num + a, this);
+			}
+		}
+		
+		obj.add1(3);
+		obj.add2(3);
+	</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>appendChild() 예제</title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<ul id="list">
+		<li>first</li>
+		<li>second</li>
+	</ul>
+
+	<script>
+		var list = document.getElementById('list');
+		var li = document.createElement('li'); // 문서 객체 추가
+
+		li.innerHTML = 'new LisT';	// li 객체에 text 추가
+		list.appendChild(li);				// 목록에 li 객체 추가
+
+	</script>
+</body>
+</html>

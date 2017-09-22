@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>화살표 함수</title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<script>
+		var getName = () => {
+			console.log('Micheal');
+		}
+
+		var getLocation = () => console.log('Suwon');
+
+		getName();
+		getLocation();
+
+		// --------------------------------
+
+		var addNum = (a, b) => a + b;
+
+		console.log(addNum(3,5));
+
+		// ---------------------------------
+
+		document.addEventListener('click', () => {
+			document.body.style.backgroundColor = 'pink'; 
+		});
+
+
+	</script>
+</body>
+</html>

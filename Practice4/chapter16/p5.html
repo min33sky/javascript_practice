@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>함수 호이스팅
+	</title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<script>
+		let name;
+		getName();
+		console.log(name); // SyntaxError
+
+		// 변수 선언식으로 함수 정의(호이스팅 적용이 안된다.)
+		let function getName(){
+			name = 'Michael';
+		}
+		
+	</script>
+</body>
+</html>

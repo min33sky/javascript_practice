@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>343쪽 연습문제1</title>
+	<link rel="stylesheet" href="">
+	<style>
+		h1{
+			font-size: 40px;
+			color: red;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<h1>영화 정보</h1>
+	<p id="output"></p>
+	<script>
+
+		var output = document.getElementById('output');
+
+		// 영화 객체(생성자 함수)
+		function Movie(title, year, genres, score) {
+			this.title = title;		// 제목
+			this.year = year;			// 연도
+			this.genres = genres;	// 장르
+			this.score = score;		// 평점
+		}
+
+		// 영화 DB
+		function Movies(movies) {
+			this.movies = movies;
+		}
+
+		// 영화들 출력 함수
+		Movies.prototype.print = function () {
+
+			for(var i = 0; i < this.movies.length; i++){
+				var result = 'Title: ' + this.movies[i].title + '<br>' +
+				'Year: ' + this.movies[i].year + '<br>' +
+				'Genres: ' + this.movies[i].genres + '<br>' +
+				'Score: ' + this.movies[i].score + '(' + printStars(this.movies[i].score) + ')' +  '<br><hr>';
+
+				output.innerHTML += result;	
+			}
+		}
+
+		// 평점 별표 출력
+		function printStars(score) {
+			var result = '';
+			var odd = false;
+			
+			// 홀수, 짝수 점수 구별
+			if(score%2 !== 0){
+				odd = true;
+				score--;
+			}
+
+			for(var i=0; i<score; i=i+2){
+				result += '★';
+			}
+
+			// 홀수인경우는 별 반개
+			if(odd){
+				result += '☆';
+			}
+
+			return result;
+		}
+
+		var movies = [
+			new Movie('앤트맨', 2015, '액션', 7), 
+			new Movie('덩케르크', 2017, '전쟁', 8),
+			new Movie('리얼', 2017, 'SF', 1)
+		];
+
+		var movies = new Movies(movies);
+
+		// ------------------------------------------------
+		movies.print();
+
+	</script>
+</body>
+</html>

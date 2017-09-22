@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>클로저3</title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<script>
+		function outFunc() {
+			var staticValue = 0; // 지역 변수지만 정적변수로 사용
+
+			// 내부 함수(클로저)
+			function inFunc(val) {
+				var a = val || 1;			// 매개 변수 val을 a에 대입 (값이 없으면 1)
+				return staticValue += a;	// 정적 변수 값 리턴
+			}
+
+			return inFunc; // 클로저 함수를 리턴
+		}
+
+		var c = outFunc();	// 클로저 함수를 리턴 받음
+		document.write(c() + '<br>');	// 1
+		document.write(c() + '<br>');	// 2
+		document.write(c() + '<br>');	// 3
+	</script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>객체2</title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<script>
+		// 캐릭터 객체 선언
+		var character = {
+			name: '토레스',
+			job: '기사',
+			move : function () {
+				document.write(this.name + ' ' + this.job + ' 캐릭터 이동<br>');
+			},
+			stop : function () {
+				document.write(this.name + ' ' + this.job + ' 캐릭터 정지<br>');
+			}
+		}
+
+		// 메서드 실행
+		character.move();
+		character.stop();
+	</script>
+</body>
+</html>

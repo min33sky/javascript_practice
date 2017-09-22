@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>객체 참조</title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<script>
+		// 객체를 정의
+		const obj = {
+			name: 'lee'
+		};
+		console.log(obj.name);
+
+		obj.name = 'kwon';	// 객체의 속성 값 변경
+		console.log(obj.name);
+
+		obj = {};	// 객체를 재정의 - Type Error
+	</script>
+</body>
+</html>

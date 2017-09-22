@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>연습 3</title>
+	<link rel="stylesheet" href="">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			// 두 번째 li 요소를 선택
+			$('li').eq(1).css('font-size', '2em');
+
+			// 형제 li 중 .fourth 요소를 선택
+			$('li').filter('.fourth').css('font-style', 'italic');
+
+			// 첫 번째 li 요소를 선택
+			$('li').first().css('background-color', 'orange');
+
+			// 마지막 li 요소를 선택
+			$('li').last().css('border', '3px solid');
+
+			// em 요소를 포함한 li 요소를 선택
+			$('li').has('em').css('border', '3px dotted');
+		});
+	</script>
+</head>
+<body>
+		<ul>
+			<li>first</li>
+			<li>second</li>
+			<li>third</li>
+			<li class="fourth">fourth</li>
+			<li><em>fifth</em></li>
+			<li>sixth</li>
+		</ul>
+
+
+</body>
+</html>

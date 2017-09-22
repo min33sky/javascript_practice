@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>클래스</title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<script>
+		// 클래스 선언
+		class Book{
+			// 속성
+			constructor(title, author, price){
+				this.title = title;
+				this.author = author;
+				this.price = price;
+			}
+
+			// 메서드
+			book_info(){
+				console.log(`${this.title}, ${this.author}`);
+			}
+		}
+
+		let book = new Book('너의 이름은', '신카이 마코토', '9900');
+
+		book.book_info();
+	</script>
+</body>
+</html>

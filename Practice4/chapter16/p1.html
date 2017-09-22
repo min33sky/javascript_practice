@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>let 변수</title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<script>
+		if(true){
+			var me = 'alive';
+		}
+		// var는 함수 블록이 아닌이상 전역 변수 처리된다.
+		console.log(me); // 'alive' : 변수 me가 살아있다. (전역 변수)
+
+		if(true){
+			let eb = 'euk-bak';
+		}
+		// let은 블록 안에서만 변수가 유효하다.
+		console.log(eb);	// 변수를 찾을 수 없다.
+	</script>
+</body>
+</html>

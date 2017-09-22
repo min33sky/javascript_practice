@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>연습 7</title>
+	<link rel="stylesheet" href="">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script>
+		$(function () {
+			// 요소에 정보를 추가
+			$('li').first().html('<h1>HTML 추가</h1>');
+			$('li').last().text('<h1>HTML 추가</h1>');
+
+			// 요소 내 값을 읽기
+			var html = $('li').first().html();
+			var text = $('li').first().text();
+			console.log(html);
+			console.log(text);
+		})
+	</script>
+</head>
+<body>
+	<ul>
+		<li>Home</li>
+		<li>Portfolio</li>
+		<li>About</li>
+		<li class="select">Contact</li>
+	</ul>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>연습 2</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<link rel="stylesheet" href="">
+	<script>
+		$(document).ready(function() {
+			// 전체 요소를 선택
+			$('*').css('font-size', '32px');
+
+			// h1 요소를 선택
+			$('h1').css('color', 'red');
+
+			// id='myId' 선택
+			$('#myId').css('color', 'blue');
+
+			// class='myClass' 선택
+			$('.myClass').css('color', 'green');
+		});
+	</script>
+</head>
+<body>
+	<h1>타입 선택자</h1>
+	<h2 id="myId">아이디 선택자</h2>
+	<h3 class="myClass">클래스 선택자</h3>
+</body>
+</html>

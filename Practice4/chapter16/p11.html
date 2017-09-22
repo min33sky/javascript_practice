@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>객체 표현식</title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<script>
+		// ES5
+		let name = 'iphone', price = '80';
+
+		let phone = {
+			name: name,
+			price: price,
+			info : function () {
+				console.log(this.name + ', ' + this.price);
+			}
+		}
+
+		console.log(phone);
+		phone.info();
+
+		// ES6
+
+		let phone2 = {
+			name, price,
+			info(){
+				console.log(this.name + ', ' + this.price);
+			}
+
+		}
+
+		console.log(phone2);
+		phone2.info();
+		
+	</script>
+</body>
+</html>

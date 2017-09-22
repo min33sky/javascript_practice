@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>클로저2</title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<script>
+		function outFunc() {
+			var localValue = 0; // 지역 변수
+
+			localValue++;
+			return localValue;
+		}
+
+		document.write(outFunc() + '<br>');	// 1
+		document.write(outFunc() + '<br>');	// 1
+		document.write(outFunc() + '<br>');	// 1
+</script>
+</body>
+</html>

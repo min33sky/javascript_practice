@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>AJAX 연습</title>
+	<link rel="stylesheet" href="">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			// json 파일을 data로 가져옴
+			$.getJSON('book.json', function(data) {
+
+				// data 객체 지정
+				var books = data.book;
+
+				// data 순회
+				$(books).each(function (i, obj) {
+					var title = obj.title;
+					var author = obj.author;
+					var price = obj.price;
+					var txt = '<li>' + title + ', ' + author + ', ' + price + '</li><hr>';
+					$('body').append(txt);
+				}); // 순회 끝
+			});	// Ajax 호출 끝
+		});
+	</script>
+	<style>
+		li{
+			color: blue;
+		}
+	</style>
+</head>
+<body>
+	
+</body>
+</html>

@@ -62,7 +62,7 @@ window.onload = function () {
 			indicator.innerHTML += '<li>' + (i+1) + '</li>';
 		}
 
-		indicator_li = indicator.querySelectorAll('li');
+		indicator_li = indicator.querySelectorAll('li');	// 목록
 		change_page(indicator_num);
 	}
 

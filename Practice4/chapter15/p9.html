@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>문서 객체 이동</title>
+	<link rel="stylesheet" href="">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+</head>
+<body>
+	<figure>
+		<img src="http://placehold.it/200x150/f90?text=1">
+		<img src="http://placehold.it/200x150/f90?text=2">
+		<img src="http://placehold.it/200x150/f90?text=3">
+		<img src="http://placehold.it/200x150/f90?text=4">
+	</figure>
+
+	<button onclick="img_move()">append</button>
+
+	<script>
+		function img_move() {
+			// 첫 번째 이미지를 마지막으로 이동
+			$('img').first().appendTo('figure');
+		}
+	</script>
+</body>
+</html>

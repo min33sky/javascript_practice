@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>for문과 클로저</title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<script>
+		var arr = [];
+
+		for (var i = 0; i < 3; i++) {
+			arr[i] = function () {	// 클로저 함수가 for문의 변수 i를 참조한다
+				return i;
+			}
+			console.log(arr[i]());	// 0 1 2
+		}
+
+		// for문 종료 후 배열 함수 실행
+		document.write(arr[0]() + '<br>'); // 3
+		document.write(arr[1]() + '<br>'); // 3
+		document.write(arr[2]() + '<br>'); // 3
+
+		////////////////////////////////////////////////////////////////////
+
+		var arr2 = [];
+
+		for (var i = 0; i < 3; i++) {
+			(function (x) {				
+				arr2[x] = function () {		// 클로저가 익명 함수의 변수를 참조
+					return x;
+				}
+			})(i);	// 익명 함수
+		}
+
+		// for문 종료 후 배열 함수 실행
+		document.write(arr2[0]() + '<br>'); // 0
+		document.write(arr2[1]() + '<br>'); // 1
+		document.write(arr2[2]() + '<br>'); // 2
+
+		//////////////////////////////////////////////////////////////////////
+
+		var arr = [];
+
+		for (let i = 0; i < 3; i++) {
+			let x = i;
+			arr[x] = function () {
+				return x;
+			}
+		}
+
+		// for문 종료 후 배열 함수 실행
+		document.write(arr2[0]() + '<br>'); // 0
+		document.write(arr2[1]() + '<br>'); // 1
+		document.write(arr2[2]() + '<br>'); // 2
+
+	</script>
+</body>
+</html>
