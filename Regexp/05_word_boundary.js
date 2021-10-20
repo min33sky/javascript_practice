@@ -12,3 +12,6 @@ console.log('Hello Java!'.match(/\bJava!\b/)); // !는 \w가 아니므로
 //* 문자 뿐만 아니라 숫자도 적용된다.
 console.log('1 23 456 78'.match(/\b\d\d\b/g));
 console.log('12,34,56'.match(/\b\d\d\b/g));
+
+str = 'Breakfast at 09:00 in the room 123:456.';
+console.log(str.match(/\b\d\d:\d\d\b/));
