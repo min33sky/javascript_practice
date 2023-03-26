@@ -17,7 +17,7 @@ const yujin = {
 
 console.log(yujin);
 
-// Extensible
+//* Extensible
 
 console.log(Object.isExtensible(yujin));
 Object.preventExtensions(yujin);
@@ -26,10 +26,11 @@ console.log(Object.isExtensible(yujin));
 yujin['height'] = 160; // 무시됨
 console.log(yujin);
 
-delete yujin['name']; // 삭제는 가능
+delete yujin['name']; //* 삭제는 가능
 console.log(yujin);
 
-// Sealed
+//* Sealed
+//? - configurable: false
 
 const yujin2 = {
   name: 'Yujin',
@@ -57,7 +58,10 @@ console.log(yujin2);
 yujin2['name'] = 'Yujin2'; // 변경 가능
 console.log(yujin2);
 
-// Frozen
+console.log('seal: ', Object.getOwnPropertyDescriptor(yujin2, 'name'));
+
+//* Frozen
+//? - writable: false,  configurable: false
 
 const yujin3 = {
   name: 'Yujin',
